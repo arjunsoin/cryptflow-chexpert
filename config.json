@@ -1,0 +1,8 @@
+
+{
+    "model_name": "frozen_graph.pb",
+    "input_tensors": { "x" : "1,3,320,320"},
+    "target": "SCI",
+    "scale": 20,
+    "output_tensors": [ "Identity:0"]
+  }
