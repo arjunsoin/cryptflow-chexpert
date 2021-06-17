@@ -11,7 +11,7 @@ cd EzPC
 ### Experiment setup:
 1. 
    ```
-   source ~/EzPC/mpc_venv
+   source ~/EzPC/mpc_venv/bin/activate
    ```
 2. Copy experiment.tar to /data1/ and then:
 	```
@@ -38,7 +38,7 @@ cd EzPC
    ```
 2. 
    ```
-   source ~/EzPC/mpc_venv
+   source ~/EzPC/mpc_venv/bin/activate
    ```
 3.
    ```
