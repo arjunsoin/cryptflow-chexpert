@@ -1,6 +1,6 @@
 # Client instructions
 
-### EzPC Setup:
+### EzPC (language for secure machine learning) Setup:
 ```
 cd ~/
 git clone https://github.com/mpc-msri/EzPC.git
@@ -9,7 +9,7 @@ cd EzPC
 ```
 
 ### Experiment setup:
-1. 
+1. Set up virtual environment to conduct the experiment:
    ```
    source ~/EzPC/mpc_venv/bin/activate
    ```
@@ -18,13 +18,15 @@ cd EzPC
     cd /data1/
 	tar -xf experiment.tar
 	```
-3. Put all your input images in /data1/experiment/images directory
-4. Compile pruned model (model without weights) (will take ~20 mins)
+3. Put all your input images in /data1/experiment/images directory. Name them such that you are able to compare outputs with ground truth once the experiment has finished running. The exact naming convention you use will be followed by CrypTFlow to create subsequent intermediary inputs (numpy input files, txt files to record memory and computation statistics)
+
+4. Compile the pruned model (model WITHOUT weights) (expected time ~20 mins). The config.json file contains relevant input configurations for the model.
    ```
    unzip client.zip
    python ~/EzPC/Athos/CompileONNXGraph.py --config config.json --role client
    ```
-5. Update EZPC_PATH in ```preprocess_images.sh``` and ```run_2pc.sh``` if you didn't clone EzPC in ~/ directory.
+5. Update EZPC_PATH in ```preprocess_images.sh``` and ```run_2pc.sh``` if you have not cloned EzPC in ~/ directory.
+
 6. Preprocess images:
 	```
    bash preprocess_images.sh
