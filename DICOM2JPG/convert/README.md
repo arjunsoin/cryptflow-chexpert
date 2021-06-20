@@ -1,6 +1,6 @@
 # dicom2jpg
 
-dicom2jpg is a Python converter to generate CrypTFlow secure inference-ready X-ray image input directory. Using the DICOM to JPG converter for CrypTFlow secure inference is simple!
+dicom2jpg is a Python converter that can be used to generate a CrypTFlow secure inference-ready X-ray image input directory. Using the DICOM to JPG converter for CrypTFlow secure inference is very simple!
 
 ## Usage
 
