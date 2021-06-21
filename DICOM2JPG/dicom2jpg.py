@@ -14,6 +14,7 @@ def dicom2jpg(source_folder, output_folder):
             # Convert to float to avoid overflow or underflow losses.
             image_2d = ds.pixel_array.astype(float)
             
+            # depending on the value of the array, X-ray may look inverted - fix that:
             if ds.PhotometricInterpretation == "MONOCHROME1":
                 image_2d = np.amax(image_2d) - image_2d 
 
