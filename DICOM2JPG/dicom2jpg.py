@@ -13,6 +13,9 @@ def dicom2jpg(source_folder, output_folder):
 
             # Convert to float to avoid overflow or underflow losses.
             image_2d = ds.pixel_array.astype(float)
+            
+            if ds.PhotometricInterpretation == "MONOCHROME1":
+                image_2d = np.amax(image_2d) - image_2d 
 
             # Rescaling grey scale between 0-255
             image_2d_scaled = (np.maximum(image_2d,0) / image_2d.max()) * 255.0
